@@ -1,0 +1,278 @@
+/*css Variables*/
+
+
+:root {
+    --main-color: #130642;
+    --second-color: #fffcfc;
+    --third-color: #eb158ad7 ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    background-color: var(--main-color);
+    z-index: 1;
+    transition: 0.5s;
+    font-weight: bold;
+    
+}
+
+header.scroll {
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: -7rem;
+    background-color: var(--main-color);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.logo {
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--second-color);
+    font-weight: 600;
+
+}
+
+span{
+    color: #eb158ad7;
+
+}
+
+nav .dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--second-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+nav .dropdown-content a {
+    color:var(--main-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+nav .dropdown-content a:hover {
+    width: 100%;
+    transition: width 0.5s;
+    color: var(--third-color);
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: inline;
+}
+
+div .dropdown-content{
+    text-decoration: none;
+    color: var(--second-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    width: max-content;
+}
+
+nav {
+    position: absolute;
+    left: 30%;
+    bottom: 1rem;
+    width: 60%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--second-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    width: max-content;
+}
+
+nav ul li a ::before {
+    content: "";
+    position:absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--third-color);
+    transition: width 0.5s;
+}
+
+nav li a:hover{
+    width: 100%;
+    transition: width 0.5s;
+    color: var(--third-color);
+
+}
+
+ /*sections*/
+section .one .container{
+    max-width: 100%;
+}
+
+.one{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    height: 65vh;
+    width: 100%;
+    color: var(--second-color);
+    background-color: var(--main-color);
+}
+
+.container{
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    width: 50%;
+}
+
+h1{
+    margin-bottom: 1rem;
+    color: var(--third-color);
+    font-size: 2rem;
+}
+
+
+.two {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    height: 100vh;
+    width: 100%;
+
+    list-style: none;
+}
+
+.four {
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    height: 100vh;
+    width: 100%;
+
+    list-style: none;
+}
+
+.five {
+    position: absolute;
+    top: 120%;
+    left: 10%;
+    height: 100vh;
+    width: 100%;
+
+    list-style: none;
+}
+
+.four .container1 {
+    list-style: none;
+    float: left;
+    height: 100vh;
+    width: 50%;
+
+}
+
+.five .container {
+    list-style: none;
+    float: left;
+    height: 100vh;
+    width: 50%;
+
+}
+
+.two #About h2{
+    
+    left: 50%;
+    text-align: center;
+}
+
+section .footer  {
+    text-decoration: none;
+    color: var(--second-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    width: 100%;
+    position: fixed;
+    background-color:var(--main-color) ;
+    padding: 0;
+    left: 0%;
+    bottom: 0;
+    text-align: center;
+    z-index: 99;
+    justify-content: center;
+    
+  }
+
+  section .footer footer section .container:hover {
+    width: 100%;
+    transition: width 0.5s;
+    color: var(--third-color);
+
+}
+section .footer footer section .container ::before{
+  content: "";
+    position:absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--third-color);
+    transition: width 0.5s;
+}
+
+section .footer footer section .container :hover::before{
+    position: relative;
+    background-color:var(--main-color) ;
+    padding: 0;
+    left: 0%;
+    bottom: 0;
+    text-align: center;
+    z-index: 99;
+    justify-content: center;
+    width: 100%;
+    color: var(--second-color);
+  }
+.footer ul li a {
+    text-decoration: none;
+    width: 100%;
+    transition: width 0.5s;
+    color: var(--third-color);
+
+}
+@media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+
+} 
